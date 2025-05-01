@@ -1,0 +1,48 @@
+﻿<Page x:Class="MultiPageForm.Pages.AddressPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Адрес">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Адрес" FontSize="20" FontWeight="Bold" Margin="0,0,0,20"/>
+
+        <StackPanel Grid.Row="1" Margin="0,0,0,10">
+            <TextBlock Text="Город:" Margin="0,0,0,5"/>
+            <TextBox x:Name="CityTextBox"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Margin="0,0,0,10">
+            <TextBlock Text="Улица:" Margin="0,0,0,5"/>
+            <TextBox x:Name="StreetTextBox"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Margin="0,0,0,10">
+            <TextBlock Text="Номер дома:" Margin="0,0,0,5"/>
+            <TextBox x:Name="HouseNumberTextBox"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4" Margin="0,0,0,10">
+            <TextBlock Text="Номер квартиры (опционально):" Margin="0,0,0,5"/>
+            <TextBox x:Name="ApartmentNumberTextBox"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="6" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Назад" Padding="20,5" Margin="0,0,10,0" Click="BackButton_Click"/>
+            <Button Content="Отправить" Padding="20,5" Click="SubmitButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>
